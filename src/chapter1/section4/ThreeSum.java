@@ -1,7 +1,7 @@
 package chapter1.section4;
 
-import chapter1.util.MyUtils;
-import chapter1.util.TimeCounter;
+import util.PathUtils;
+import util.TimeCounter;
 import edu.princeton.cs.algs4.In;
 
 /**
@@ -27,7 +27,7 @@ public class ThreeSum {
 
     public static void main(String[] args) {
         TimeCounter t = new TimeCounter();
-        int[] a = new In(MyUtils.getFilePath("1Kints.txt")).readAllInts();
+        int[] a = new In(PathUtils.getFilePath("1Kints.txt")).readAllInts();
         System.out.println(count(a));
         t.end();
     }

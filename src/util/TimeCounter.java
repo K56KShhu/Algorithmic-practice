@@ -1,4 +1,4 @@
-package chapter1.util;
+package util;
 
 /**
  * @author zkyyo

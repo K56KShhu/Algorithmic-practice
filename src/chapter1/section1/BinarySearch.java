@@ -1,6 +1,6 @@
 package chapter1.section1;
 
-import chapter1.util.MyUtils;
+import util.PathUtils;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -24,8 +24,8 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int[] whitelist = new In(MyUtils.getFilePath("tinyW.txt")).readAllInts();
-        int[] keys = new In(MyUtils.getFilePath("tinyT.txt")).readAllInts();
+        int[] whitelist = new In(PathUtils.getFilePath("tinyW.txt")).readAllInts();
+        int[] keys = new In(PathUtils.getFilePath("tinyT.txt")).readAllInts();
 
         Arrays.sort(whitelist);
         for (int key : keys) {
