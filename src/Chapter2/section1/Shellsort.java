@@ -24,6 +24,7 @@ public class Shellsort {
             }
             h = h / 3;
         }
+        System.out.println(isSorted(a));
     }
 
     public static boolean less(Comparable v, Comparable w) {

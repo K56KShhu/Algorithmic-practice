@@ -1,5 +1,7 @@
 package Chapter2.section1;
 
+import Chapter2.section2.Merge;
+import Chapter2.section2.MergeBU;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
@@ -15,6 +17,15 @@ public class SortComapre {
         }
         if (alg.equals("Selection")) {
             Selection.sort(a);
+        }
+        if (alg.equals("Shellsoet")) {
+            Shellsort.sort(a);
+        }
+        if (alg.equals("Merge")) {
+            Merge.sort(a);
+        }
+        if (alg.equals("MergeBU")) {
+            MergeBU.sort(a);
         }
         return timer.elapsedTime();
     }
@@ -32,10 +43,18 @@ public class SortComapre {
     }
 
     public static void main(String[] args) {
-        double t1 = timeRandomInput("Insertion", 1000, 100000);
-        double t2 = timeRandomInput("Selection", 1000, 100000);
+        int n = 1000;
+        int t = 100000;
+        double t1 = timeRandomInput("Insertion", n, t);
+        double t2 = timeRandomInput("Selection", n, t);
+        double t3 = timeRandomInput("Shellsort", n, t);
+        double t4 = timeRandomInput("Merge", n, t);
+        double t5 = timeRandomInput("MergeBU", n, t);
         System.out.println("Insertion " + t1);
         System.out.println("Selection " + t2);
+        System.out.println("Shellsort " + t3);
+        System.out.println("Merge     " + t4);
+        System.out.println("MergeBU   " + t5);
         System.out.println(t2 / t1);
     }
 }
